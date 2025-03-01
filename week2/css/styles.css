@@ -1,5 +1,5 @@
 body {
-  background-color: lightsteelblue;
+  background-color: lightyellow;
 }
 h1 {
   color: blue;
@@ -10,13 +10,13 @@ h5 {
 }
 
 h2{
-    color: green;
+    color: blue;
     text-decoration: underline; 
 }
 p {
   color: black;
   font-family: Geneva;
-  font-size: 80%;
+  font-size: 100%;
   border: 1px solid powderblue;
   padding: 3px;
   margin: 5px auto;
