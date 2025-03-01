@@ -1,0 +1,23 @@
+body {
+  background-color: lightsteelblue;
+}
+h1 {
+  color: blue;
+}
+
+h5 {
+  color: red;
+}
+
+h2{
+    color: green;
+    text-decoration: underline; 
+}
+p {
+  color: black;
+  font-family: Geneva;
+  font-size: 80%;
+  border: 1px solid powderblue;
+  padding: 3px;
+  margin: 5px auto;
+}
