@@ -2,17 +2,14 @@
 <html>
   <head>
     <title>Pablo Picasso</title>
-    <link rel="stylesheet" href="week2/css/styles.css" />
+    <link rel="stylesheet" href="week3/css/styles.css" />
   </head>
 
   <body>
     <h5>Page is dedicated to the great pablo picasso.</h5>
     <h5>
-      for other exercises in Week 2, click
-      <a href="week2/html_css.html">CSS</a>,
-      <a href="week2/html_colors.html">Colors</a>,
-      <a href="week2/html_css_external.html">External css</a>,
-      <a href="week2/html_formating.html">Formatting</a>
+      for updated accessible page, click
+      <a href="accessible.html" target="_blank"> Accessible </a>
     </h5>
 
     <h1>Pablo Picasso</h1>
@@ -65,15 +62,23 @@
     </p>
     <hr />
 
-    <h4><ins>The last supper from picasso collection</ins></h4>
-    <img alt="The last supper 1897"  
-      src="https://colleccions.eicub.net/api/1/images/https%3A%2F%2Fdobubt4dam3m5.cloudfront.net%2Fpublic%2FHeritageObject%2FH289047%2F163292%2Ffull%2Foriginal%2F0%2Fdefault.jpg"
-      style="border: 5px solid blue"
-    />
-    <img alt="Two Rooms 1895"  
-      src="https://colleccions.eicub.net/api/1/images/https%3A%2F%2Fdobubt4dam3m5.cloudfront.net%2Fpublic%2FHeritageObject%2FH290642%2F142223%2Ffull%2Foriginal%2F0%2Fdefault.jpg"
-    />
+    <h4><ins>Famous paintings from picasso collection</ins></h4>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://museupicassobcn.cat/en/collection/artwork/last-supper">
+          <img src="https://colleccions.eicub.net/api/1/images/https%3A%2F%2Fdobubt4dam3m5.cloudfront.net%2Fpublic%2FHeritageObject%2FH289047%2F163292%2Ffull%2Foriginal%2F0%2Fdefault.jpg"> </a>
+        <div class="desc">Last Supper 1955</div>
+      </div>
+    </div>
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://museupicassobcn.cat/en/collection/artwork/two-rooms">
+          <img src="https://colleccions.eicub.net/api/1/images/https%3A%2F%2Fdobubt4dam3m5.cloudfront.net%2Fpublic%2FHeritageObject%2FH290642%2F142223%2Ffull%2Foriginal%2F0%2Fdefault.jpg"> </a>
+          <div class="desc">Two Rooms 1895</div>
+      </div>
+    </div>
     <br />
+    <hr>
     <a href="https://museupicassobcn.cat/en/">
       Image source - Museu Picasso
     </a>
