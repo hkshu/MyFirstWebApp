@@ -78,6 +78,8 @@ div.desc {
   }
 }
 
+/* reference --- https://blog.logrocket.com/css-breakpoints-responsive-design/  -- https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
 .clearfix:after {
   content: "";
   display: table;
