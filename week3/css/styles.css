@@ -28,7 +28,7 @@ div.gallery {
 }
 
 div.gallery:hover {
-  border: 1px solid red;
+  border: 5px solid green;
 }
 
 div.gallery img {
@@ -37,7 +37,7 @@ div.gallery img {
 }
 
 div.desc {
-  padding: 15px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -48,19 +48,34 @@ div.desc {
 .responsive {
   padding: 0 6px;
   float: left;
-  width: 24.99999%;
+  width: 24.9999%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 640px) {
   .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
+    width: 100%;
   }
 }
 
-@media only screen and (max-width: 500px) {
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
   .responsive {
     width: 100%;
+    float: left;
+  }
+}
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .responsive {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {
+  .responsive {
+    width: 25%;
   }
 }
 
