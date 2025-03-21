@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Test App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>My Test App</h1>
+    <p>This is a test application.</p>
+
+    <div>
+      <input
+        type="number"
+        name="num1"
+        id="num1"
+        placeholder="Enter a number"
+        required
+      />
+      <input
+        type="number"
+        name="num2"
+        id="num2"
+        placeholder="Enter another number"
+        required
+      />
+      <button id="addBtn" onclick="addNumbers()">Add</button>
+    </div>
+
+    <br /><br />
+
+    <div>
+      <p><label id="result">Result :: </label><br /></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

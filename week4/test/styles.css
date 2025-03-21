@@ -1,0 +1,41 @@
+body {
+    background-color: powderblue;
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding: 20px;
+    font-size: 2em;
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: blue;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 50px;
+}
+
+div {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
