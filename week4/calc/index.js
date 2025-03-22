@@ -31,7 +31,7 @@ function addSubscriber() {
           event.preventDefault()
       }
     else{
-          document.getElementById("thankYou").innerHTML = "Please enter your d"; 
+          document.getElementById("thankYou").innerHTML = "Please provide all information below"; 
          }
     }
   else
