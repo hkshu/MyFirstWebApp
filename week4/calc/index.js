@@ -13,9 +13,32 @@ function calculate() {
 }
 
 function addSubscriber() {
-  subscriberName = document.getElementById("name");
-  subscriberEmail = document.getElementById("email");
-  subscriberbDate = document.getElementById("bDate");
+  var subscriberName = "";
+  var subscriberEmail = "";
+  var subscriberbDate = "";
 
-  alert('Thank you ' + subscriberName.value + ' for subscribing to our newsletter!');
+  if (document.getElementById("newsletter").checked)
+     {
+      subscriberName = document.getElementById("name");
+      subscriberEmail = document.getElementById("email");
+      subscriberbDate = document.getElementById("bDate");
+
+    //alert('Thank you ' + subscriberName.value + ' for subscribing to our newsletter!');
+
+    //alert(document.getElementById("displayData").innerHTML);
+    if (subscriberbDate.value != "" & subscriberEmail.value != "" & subscriberName.value != ""){
+          document.getElementById("thankYou").innerHTML = "Thank you " + subscriberName.value + " for subscribing to our newsletter!. We will send you an email to " + subscriberEmail.value + " on your birthday " + subscriberbDate.value + " with a special gift!"; 
+          event.preventDefault()
+      }
+    else{
+          document.getElementById("thankYou").innerHTML = "Please enter your d"; 
+         }
+    }
+  else
+    {
+      document.getElementById("thankYou").innerHTML = 'Please check the newsletter checkbox';
+    }  
+  //document.getElementById("email").value = subscriberEmail.value;
+  //document.getElementById("bDate").value = subscriberbDate.value;
+
 }

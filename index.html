@@ -123,23 +123,25 @@
     <hr>
     <fieldset>
     <legend class="myHeader">Subscribe to our newsletter :</legend>
+   
+    <h5 id="thankYou"></h5>
 
     <form>
       <label class="myHeader" for="name">Name       :</label>
-      <input type="text" id="name" name="name" value="John Doe"><br>
+      <input type="text" id="name" name="name" required><br>
       <label class="myHeader" for="email">Email       :</label>
-      <input type="email" id="email" name="email" value="john.doe@example.com"><br>
+      <input type="email" id="email" name="email" required><br>
       <label class="myHeader" for="bdate">Birthdate :</label>
       <input type="date" id="bDate" name="bDate" max="2007-03-01" required> <br>(Birth date required as subscription is only if you are 18 years and above)<br>
       
       <br>
-      <input type="checkbox" id="newsletter" name="newsletter" checked>
+      <input type="checkbox" id="newsletter" name="newsletter">
       <label class="myheader" for="newsletter">Subscribe to our newsletter</label><br><br>
 
-      <input type="submit" value="Submit" onclick="addSubscriber()">
+      <input type="submit" value="Subscribe" onclick="addSubscriber()">
       </form>
     </fieldset>
-    <p id="demo"></p>
+ 
 
     <script type="text/javascript" src="week4/calc/index.js"></script>
   </body>
