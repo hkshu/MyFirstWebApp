@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Pablo Picasso</title>
-    <link rel="stylesheet" href="week4/css/styles.css" />
+    <link rel="stylesheet" href="week5/css/styles.css" />
   </head>
 
   <body>
@@ -128,9 +128,9 @@
 
     <form>
       <label class="myHeader" for="name">Name       :</label>
-      <input type="text" id="name" name="name" required><br>
+      <input type="text" id="name" name="name" onchange="upperCase('name')"  required><br>
       <label class="myHeader" for="email">Email       :</label>
-      <input type="email" id="email" name="email" required><br>
+      <input type="email" id="email" name="email" onchange="lowerCase('email')" required><br>
       <label class="myHeader" for="bdate">Birthdate :</label>
       <input type="date" id="bDate" name="bDate" max="2007-03-01" required> <br>(Birth date required as subscription is only if you are 18 years and above)<br>
       
@@ -143,6 +143,6 @@
     </fieldset>
  
 
-    <script type="text/javascript" src="week4/calc/index.js"></script>
+    <script type="text/javascript" src="week5/script/index.js"></script>
   </body>
 </html>
