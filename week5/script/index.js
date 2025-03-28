@@ -67,3 +67,30 @@ function lowerCase(id) {
   const x = document.getElementById(id);
   x.value = x.value.toLowerCase();
 }
+
+function fetchData() {
+  const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+  ;
+  fetch(url)
+    .then(res => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      data.forEach((records => {
+        markup = `<li>  <img src=${records.url} width="40" height="50"> My Name: ${records.id} </li>`;
+        
+        document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
+        
+      }));
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+}
+    // .then((data) => {
+    //   console.log(data);
+    //     data.forEach((records => {
+    //     const markup = `<li> ${id} </li>`;
+    //     document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
+    //   }));
+    // })
+    // .catch((error) => console.error("Error fetching data:", error));
