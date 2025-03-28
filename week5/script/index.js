@@ -1,3 +1,31 @@
+function fetchData() {
+
+  import { apiKey } from "config.js";
+  
+  const url = "https://calendarific.com/api/v2/holidays?api_key=" & apiKey & "&country=es-b&year=2025";
+  fetch(url)
+    .then(res => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data.response.holidays);
+      data.response.holidays.forEach((records => {
+
+        const type = records.type;
+
+        if (type == "National holiday") {
+          markup = `<li> <strong> ${records.date.iso} </strong> :: ${records.name} </li>`;
+        
+          document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
+        }
+
+      }));
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+  }
+
+
+
 function clearDisplay() {
   document.getElementById("display").value = "";
 }
@@ -68,28 +96,8 @@ function lowerCase(id) {
   x.value = x.value.toLowerCase();
 }
 
+fetch('week5/script/config.json').then(function (config) {
+  console.log('API key:', config.apiKey);
+  const api_key = config.apiKey;
+});
 
-function fetchData() {
-  const url = "https://calendarific.com/api/v2/holidays?api_key=ZvjLogzagsQqP5j02Vb0WYN85OBAfYRy&country=es-b&year=2025";
-  fetch(url)
-    .then(res => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data.response.holidays);
-      data.response.holidays.forEach((records => {
-
-        const type = records.type;
-
-        if (type == "National holiday") {
-          markup = `<li> <strong> ${records.date.iso} </strong> :: ${records.name} </li>`;
-        
-          document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
-        }
-        
-       
-        
-      }));
-    })
-    .catch((error) => console.error("Error fetching data:", error));
-  }
