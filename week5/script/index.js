@@ -2,13 +2,13 @@ function fetchData() {
 
   var myKey = secretPhrase();  ;
   // Fetching data from the API
-  url = "1https://calendarific.com/api/v2/holidays?api_key=" +  myKey + "&country=es-b&year=2025";
+  url = "https://calendarific.com/api/v2/holidays?api_key=" +  myKey + "&country=es-b&year=2025";
   fetch(url)
     .then((res) => {
       return res.json();
     })
     .then((data) => {
-      console.log(data.response.holidays);
+      //console.log(data.response.holidays);
       data.response.holidays.forEach((records) => {
         const type = records.type;
 
