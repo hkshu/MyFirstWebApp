@@ -1,6 +1,10 @@
-function fetchData() {
 
-  import { apiKey } from "config.js";
+fetch('week5/script/config.json').then(function (config) {
+  console.log('API key:', config.apiKey);
+});
+
+
+function fetchData() {
   
   const url = "https://calendarific.com/api/v2/holidays?api_key=" & apiKey & "&country=es-b&year=2025";
   fetch(url)
@@ -95,9 +99,3 @@ function lowerCase(id) {
   const x = document.getElementById(id);
   x.value = x.value.toLowerCase();
 }
-
-fetch('week5/script/config.json').then(function (config) {
-  console.log('API key:', config.apiKey);
-  const api_key = config.apiKey;
-});
-
