@@ -1,34 +1,26 @@
-
-fetch('week5/script/config.json').then(function (config) {
-  console.log('API key:', config.apiKey);
-});
-
-
 function fetchData() {
-  
-  const url = "https://calendarific.com/api/v2/holidays?api_key=" & apiKey & "&country=es-b&year=2025";
+
+  var myKey = secretPhrase();  ;
+  // Fetching data from the API
+  url = "1https://calendarific.com/api/v2/holidays?api_key=" +  myKey + "&country=es-b&year=2025";
   fetch(url)
-    .then(res => {
+    .then((res) => {
       return res.json();
     })
     .then((data) => {
       console.log(data.response.holidays);
-      data.response.holidays.forEach((records => {
-
+      data.response.holidays.forEach((records) => {
         const type = records.type;
 
         if (type == "National holiday") {
           markup = `<li> <strong> ${records.date.iso} </strong> :: ${records.name} </li>`;
-        
+
           document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
         }
-
-      }));
+      });
     })
     .catch((error) => console.error("Error fetching data:", error));
-  }
-
-
+}
 
 function clearDisplay() {
   document.getElementById("display").value = "";
@@ -85,15 +77,12 @@ function addSubscriber() {
     document.getElementById("thankYou").innerHTML =
       "Please check the newsletter checkbox";
   }
-
-
 }
 
 function upperCase(id) {
   const x = document.getElementById(id);
   x.value = x.value.toUpperCase();
 }
-
 
 function lowerCase(id) {
   const x = document.getElementById(id);
