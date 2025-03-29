@@ -4,6 +4,21 @@
     <title>Pablo Picasso</title>
     <link rel="stylesheet" href="week6/css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("input").focus(function(){
+          $(this).css("background-color", "yellow");
+        });
+        $("input").blur(function(){
+          $(this).css("background-color", "green");
+        });
+      });
+      $(document).ready(function(){
+        $("#holidays").click(function(){
+          $("#holidays").hide();
+        });
+      });
+      </script>
   </head>
 
   <body>
@@ -123,7 +138,7 @@
     </ol>
     <hr>
   
-    <h1 > Planning a trip, <button onclick="fetchData(); this.disabled=true;" id="holidays"> Click to check public holidays</button></h1>
+    <h1 > Planning a trip, <button onclick="fetchData();" id="holidays"> Click to check public holidays</button></h1>
     <div id="myHeader">
     <ul id="catList" >
       
