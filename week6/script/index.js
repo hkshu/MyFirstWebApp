@@ -68,7 +68,8 @@ function addSubscriber() {
         " on your birthday " +
         subscriberBirthDate.value +
         " with a special gift!";
-      document.getElementById("thankYou").style.color = "green";
+      document.getElementById("thankYou").style.color = "yellow";
+      document.getElementById("thankYou").style.fontSize = "20px";
       event.preventDefault();
     } else {
       document.getElementById("thankYou").innerHTML =
