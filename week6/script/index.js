@@ -46,7 +46,7 @@ function addSubscriber() {
   var subscriberEmail = "";
   var subscriberBirthDate = "";
 
-  if (document.getElementById("newsletter").checked) {
+  if (document.getElementById("name") != "") {
     subscriberName = document.getElementById("name");
     subscriberEmail = document.getElementById("email");
     subscriberBirthDate = document.getElementById("bDate");
@@ -68,14 +68,19 @@ function addSubscriber() {
         " on your birthday " +
         subscriberBirthDate.value +
         " with a special gift!";
+      document.getElementById("thankYou").style.color = "green";
       event.preventDefault();
     } else {
       document.getElementById("thankYou").innerHTML =
         "Please provide all information below";
+      document.getElementById("thankYou").style.color = "red";
+        event.preventDefault();
     }
   } else {
     document.getElementById("thankYou").innerHTML =
       "Please check the newsletter checkbox";
+    document.getElementById("thankYou").style.color = "red";
+      event.preventDefault();
   }
 }
 

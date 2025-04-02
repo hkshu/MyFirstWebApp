@@ -26,7 +26,7 @@
     <div class="row container-fluid p-5 bg-info text-red text-left my-5">
 
       <p class="container-fluid bg-info text-red text-left">
-        Pablo Ruiz Picasso[a][b] (25 October 1881 – 8 April 1973) was a Spanish
+        <strong>Pablo Ruiz Picasso</strong>[a][b] (25 October 1881 – 8 April 1973) was a Spanish
         painter, sculptor, printmaker, ceramicist, and theatre designer who spent
         most of his adult life in France. One of the most influential artists of
         the 20th century, he is known for co-founding the Cubist movement, the
@@ -184,55 +184,41 @@
     <hr />
     <div class="container-fluid p-5 bg-dark text-light text-left my-5 border">
       <h1>
-        Planning a trip,
-        <button onclick="fetchData(); this.disabled=true" id="holidays">
-          Click to check public holidays
-        </button>
-      </h1>
+        Planning a trip </h1>
+        <button onclick="fetchData(); this.disabled=true" id="holidays"> Click to check public holidays </button>
       <div id="myHeader">
         <ul id="catList"></ul>
       </div>
     </div>
 
     <hr />
+    <h5 id="thankYou"></h5>
+    <div class="container-fluid p-5 bg-success text-white text-left my-5 border">
 
-    <div
-      class="container-fluid p-5 bg-success text-white text-left my-5 border"
-    >
-      <legend class="myHeader">Subscribe to our newsletter :</legend>
+      <form >
+        <legend class="input-group mb-3" >Subscribe to our newsletter :</legend>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Name</span>
+          <input type="text" class="form-control" placeholder="Your Name" id="name" name="name" onchange="upperCase('name')" required>
+        </div>
+    
+        <div class="input-group mb-3">
+          <span class="input-group-text">email</span>
+          <input type="email" class="form-control" placeholder="Your Email" id="email" onchange="lowerCase('email')"  name="email">
+        </div>
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text">Birthdate</span>
+          <input type="date"  class="form-control" placeholder="Your Birthdate" id="bDate" name="bDate" max="2007-03-01" mandatory>
+        </div>
 
-      <h5 id="thankYou"></h5>
-
-      <form>
-        <label class="myHeader" for="name">Name :</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onchange="upperCase('name')"
-          required
-        /><br />
-        <label class="myHeader" for="email">Email :</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onchange="lowerCase('email')"
-          required
-        /><br />
-        <label class="myHeader" for="bdate">Birthdate :</label>
-        <input type="date" id="bDate" name="bDate" max="2007-03-01" required />
-        <br />(Birth date required as subscription is only if you are 18 years
-        and above)<br />
-
-        <br />
-        <input type="checkbox" id="newsletter" name="newsletter" />
-        <label class="myheader" for="newsletter"
-          >Subscribe to our newsletter</label
-        ><br /><br />
-
-        <input type="submit" value="Subscribe" onclick="addSubscriber()" />
+        <div class="input-group mb-3">
+          <button type="submit" onclick="addSubscriber()" class="btn btn-primary">Subscribe</button>
+        </div>
       </form>
+
+      <hr> *Birth date required as subscription is only if you are 18 years and above. <hr>
+      
     </div>
 
     <script type="text/javascript" src="week6/script/config.js"></script>
