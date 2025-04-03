@@ -1,0 +1,96 @@
+body {
+  background-color: lightblue;
+
+
+}
+
+.myHeader {
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+h1 {
+  color: green;
+}
+
+h5 {
+  color: red;
+}
+
+h2{
+    color: green;
+    text-decoration: underline; 
+}
+
+.header {
+  color: red;
+  font-family:  Arial, sans-serif;
+  font-size: 120%;
+  border: 1px solid powderblue;
+  padding: 3px;
+  margin: 5px auto;
+}
+
+div.gallery {
+  border: 2px solid blue;
+}
+
+div.gallery:hover {
+  border: 5px solid green;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 0px;
+  text-align: center;
+  font-style: italic;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+}
+
+@media only screen and (min-width: 640px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+  .responsive {
+    width: 75%;
+  }
+}
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 980px) {
+  .responsive {
+    width: 50%;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 1280px) {
+  .responsive {
+    width: 24.9999%;
+  }
+}
+
+/* reference --- https://blog.logrocket.com/css-breakpoints-responsive-design/  -- https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
