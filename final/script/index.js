@@ -1,8 +1,10 @@
 function fetchData() {
-
-  var myKey = secretPhrase();  ;
+  var myKey = secretPhrase();
   // Fetching data from the API
-  url = "https://calendarific.com/api/v2/holidays?api_key=" +  myKey + "&country=es-b&year=2025";
+  url =
+    "https://calendarific.com/api/v2/holidays?api_key=" +
+    myKey +
+    "&country=es-b&year=2025";
   fetch(url)
     .then((res) => {
       return res.json();
@@ -22,25 +24,12 @@ function fetchData() {
     .catch((error) => console.error("Error fetching data:", error));
 }
 
-function clearDisplay() {
-  document.getElementById("display").value = "";
-}
-
-function appendToDisplay(number) {
-  document.getElementById("display").value += number;
-}
-
-function calculate() {
-  const display = document.getElementById("display").value;
-  const result = eval(display);
-  document.getElementById("display").value = result;
-}
-
 function validateEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   return emailPattern.test(email);
 }
+
 function addSubscriber() {
   var subscriberName = "";
   var subscriberEmail = "";
@@ -75,13 +64,13 @@ function addSubscriber() {
       document.getElementById("thankYou").innerHTML =
         "Please provide all information below";
       document.getElementById("thankYou").style.color = "red";
-        event.preventDefault();
+      event.preventDefault();
     }
   } else {
     document.getElementById("thankYou").innerHTML =
       "Please check the newsletter checkbox";
     document.getElementById("thankYou").style.color = "red";
-      event.preventDefault();
+    event.preventDefault();
   }
 }
 
