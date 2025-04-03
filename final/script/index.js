@@ -1,5 +1,11 @@
+function clearList() {
+  document.querySelector("ul").innerHTML = "";
+  document.getElementById("holidatybtn").innerHTML = "Show Holidays List";
+}
+
 function fetchData() {
   var myKey = secretPhrase();
+
   // Fetching data from the API
   url =
     "https://calendarific.com/api/v2/holidays?api_key=" +
@@ -20,6 +26,7 @@ function fetchData() {
           document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
         }
       });
+      document.getElementById("holidatybtn").innerHTML = "Hide Holidays List";
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
