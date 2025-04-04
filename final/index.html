@@ -36,9 +36,7 @@
             });
             });
             // https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_collapse_events&stacked=h
-        </script>
-
-        
+        </script> 
 </head>
 
 <body>
@@ -54,7 +52,7 @@
             <div class="col-sm-12 my-3 border text-center">
                 <img class="img-fluid my-3" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg" alt="Pablo Picasso" style="width:35%;">
                 <p class="mx-2" style="text-align: left;">
-                    <strong>Pablo Ruiz Picasso</strong>[a][b] (25 October 1881 – 8 April
+                    <strong>Pablo Ruiz Picasso</strong> (25 October 1881 – 8 April
           1973) was a Spanish painter, sculptor, printmaker, ceramicist and
           theatre designer who spent most of his adult life in France. One of
           the most influential artists of the 20th century, he is known for
@@ -171,22 +169,21 @@
             </div>
         </div>
 
-
         <!-- Subscribe to newsletter -->
         <div class="container-fluid p-2 bg-success text-white text-start my-5 border">
             <form onsubmit="return addSubscriber(event);">
                 <p id="thankYou"></p>
                 <legend>Subscribe to our newsletter:</legend>
                 <div class="input-group mb-3">
-                    <span class="input-group-text">Name</span>
+                    <span class="input-group-text" for="name" >Name</span>
                     <input type="text" class="form-control" id="name" name="name" onchange="upperCase('name')" required>
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text">Email</span>
+                    <span class="input-group-text" for="email" >Email</span>
                     <input type="email" class="form-control" name="email" onchange="lowerCase('email')" id="email" required>
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text">Birthdate</span>
+                    <span class="input-group-text" for="bDate">Birthdate</span>
                     <input type="date" class="form-control" id="bDate" name="bDate" max="2007-03-01" required>
                 </div>
                 <button type="submit" class="btn btn-warning">Subscribe</button>
@@ -204,8 +201,8 @@
                 <li><a href="https://museupicassobcn.cat/en/" target="_blank">Museu Picasso de Barcelona</a></li>
             </ol>
         </div>
-<footer class="container-fluid p-2 bg-primary text-white text-center">
-        <p>© 2023 Pablo Picasso</p> </footer>
+        
+        <footer class="container-fluid p-2 bg-primary text-white text-center"> <p>© 2023 Pablo Picasso</p> </footer>
 
     <script src="script/config.js"></script>
     <script src="script/index.js"></script>
