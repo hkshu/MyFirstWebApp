@@ -98,7 +98,7 @@ function getDate18YearsOld() {
     today.getMonth(),
     today.getDate()
   );
-  console.log(birthDate);
+  //console.log(birthDate);
   document
     .getElementById("bDate")
     .setAttribute("max", birthDate.toISOString().split("T")[0]);
