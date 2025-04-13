@@ -90,3 +90,16 @@ function lowerCase(id) {
   const x = document.getElementById(id);
   x.value = x.value.toLowerCase();
 }
+
+function getDate18YearsOld() {
+  var today = new Date();
+  var birthDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  );
+  console.log(birthDate);
+  document
+    .getElementById("bDate")
+    .setAttribute("max", birthDate.toISOString().split("T")[0]);
+}

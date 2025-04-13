@@ -278,7 +278,7 @@
               required
             />
           </div>
-          <div class="input-group mb-3">
+          <div class="input-group mb-3" onload="getDate18YearsOld()">
             <span class="input-group-text">Birthdate</span>
             <input
               type="date"
@@ -286,12 +286,15 @@
               id="bDate"
               aria-label="bDate"
               name="bDate"
-              max="2007-03-01"
+              max=""
               aria-required="true"
               required
+              onclick="getDate18YearsOld()"
+              onfocus="getDate18YearsOld()"
             />
           </div>
           <button type="submit" class="btn btn-warning">Subscribe</button>
+          ** 18 Years and above only
         </form>
       </div>
     </div>
