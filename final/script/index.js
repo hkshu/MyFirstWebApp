@@ -1,6 +1,6 @@
 function clearList() {
   document.querySelector("ul").innerHTML = "";
-  document.getElementById("holidatybtn").innerHTML = "Show Holidays List";
+  document.getElementById("holidayButton").innerHTML = "Show Holidays List";
 }
 
 function fetchData() {
