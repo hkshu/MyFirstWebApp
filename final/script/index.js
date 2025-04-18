@@ -26,7 +26,7 @@ function fetchData() {
           document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
         }
       });
-      document.getElementById("holidatybtn").innerHTML = "Hide Holidays List";
+      document.getElementById("holidayButton").innerHTML = "Hide Holidays List";
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
