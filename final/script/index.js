@@ -33,7 +33,7 @@ function fetchData() {
 
 function validateEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+  // Check if the email matches the pattern
   return emailPattern.test(email);
 }
 
@@ -50,12 +50,7 @@ function addSubscriber() {
     //alert('Thank you ' + subscriberName.value + ' for subscribing to our newsletter!');
 
     //alert(document.getElementById("displayData").innerHTML);
-    if (
-      (subscriberBirthDate.value != "") &
-      (subscriberEmail.value != "") &
-      (subscriberName.value != "") &
-      validateEmail(subscriberEmail.value)
-    ) {
+    if (validateEmail(subscriberEmail.value)) {
       document.getElementById("thankYou").innerHTML =
         "Thank you " +
         subscriberName.value +
@@ -69,15 +64,10 @@ function addSubscriber() {
       event.preventDefault();
     } else {
       document.getElementById("thankYou").innerHTML =
-        "Please provide all information below";
+        "Please check your email address. It should be in the format: abc@xyz.com";
       document.getElementById("thankYou").style.color = "red";
       event.preventDefault();
     }
-  } else {
-    document.getElementById("thankYou").innerHTML =
-      "Please check the newsletter checkbox";
-    document.getElementById("thankYou").style.color = "red";
-    event.preventDefault();
   }
 }
 
